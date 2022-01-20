@@ -29,4 +29,10 @@ class PanGestureDemoUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+    
+    func testPanGesture() throws {
+        let app = XCUIApplication()
+        app.launch()
+        app.otherElements["panView"].swipeUp()
+    }
 }
